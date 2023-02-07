@@ -1,0 +1,388 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.heading1 {
+  @apply font-Bellefair text-[8rem] md:text-[15rem] lg:text-[13rem] tracking-widest uppercase text-white;
+}
+
+.heading2 {
+  @apply font-Bellefair text-[5.6rem] lg:text-[10rem] tracking-widest uppercase text-white;
+}
+
+.heading3 {
+  @apply font-Bellefair text-[5rem] tracking-widest uppercase text-white;
+}
+
+.heading4 {
+  @apply font-Bellefair text-[2rem] md:text-[3.2rem] tracking-widest uppercase text-white;
+}
+
+.heading5 {
+  @apply font-Barlow text-[1.6rem] md:text-[2rem] lg:text-[2.8rem] tracking-[2.7px] md:tracking-[4.7px] uppercase text-secondary;
+}
+
+.subheading1 {
+  @apply font-Bellefair text-[2.8rem] text-white uppercase;
+}
+
+.subheading2 {
+  @apply font-Barlow text-[1.4rem] tracking-widest text-white uppercase;
+}
+
+.navtext {
+  @apply font-Barlow text-[1.6rem] tracking-[2px] text-white;
+}
+
+.bodytext {
+  @apply font-BarlowN text-[1.5rem]  md:text-[1.8rem] text-secondary leading-10;
+}
+
+.content {
+  @apply w-full md:h-screen absolute top-0 left-0 md:pl-[8vw] overflow-hidden;
+}
+
+.content--home {
+  background: url(./assets/home/background-home-desktop.jpg);
+}
+
+.content--destination {
+  background: url(./assets/destination/background-destination-desktop.jpg);
+}
+
+.content--crew {
+  background: url(./assets/crew/background-crew-desktop.jpg);
+}
+
+.content--technology {
+  background: url(./assets/technology/background-technology-desktop.jpg);
+}
+
+@media (max-width: 768px) {
+  .content--home {
+    background: url(./assets/home/background-home-mobile.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .content--destination {
+    background: url(./assets/destination/background-destination-mobile.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .content--crew {
+    background: url(./assets/crew/background-crew-mobile.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .content--technology {
+    background: url(./assets/technology/background-technology-mobile.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+@media (max-width: 1024px) {
+  .content--home {
+    background: url(./assets/home/background-home-tablet.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .content--destination {
+    background: url(./assets/destination/background-destination-tablet.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .content--crew {
+    background: url(./assets/crew/background-crew-tablet.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .content--technology {
+    background: url(./assets/technology/background-technology-tablet.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+.destination__imgbox {
+  animation: wipe-enter 0.8s;
+}
+
+.destination__info {
+  animation: wipe-enter 0.8s;
+}
+
+.destination__img {
+  animation: rotate 10s;
+}
+
+.crew__info {
+  animation: from-bottom 0.5s;
+}
+
+.crew__img {
+  animation: from-top 0.5s;
+}
+
+.tech__info {
+  animation: from-bottom 0.5s;
+}
+
+.tech__img {
+  animation: from-top 0.5s;
+}
+
+.nav {
+  @apply bg-[rgba(255,255,255,0.04)] backdrop-blur-[40px]  justify-center gap-[3.5rem] lg:gap-[4.8rem] pl-16 pt-[10rem] md:pt-0 md:pl-[4rem] md:pr-[3rem]  lg:pl-[12rem] lg:pr-[16rem]  md:flex  duration-500 fixed md:absolute  top-0 -right-24 md:right-0  h-screen md:h-auto w-0 md:w-auto;
+}
+
+.nav.open {
+  @apply w-[68%] right-0;
+}
+
+.nav::before {
+  content: "";
+  height: 1px;
+  width: 45rem;
+  background-color: rgba(255, 255, 255, 0.25);
+  position: absolute;
+  left: -42rem;
+  top: 50%;
+}
+
+@media (max-width: 976px) {
+  .nav::before {
+    display: none;
+  }
+}
+
+.navlinks {
+  @apply uppercase py-8 md:py-[3.5rem] block border-b-[3px] border-transparent;
+  transition: all 0.3s;
+}
+
+.navlinks.active {
+  @apply md:border-white;
+}
+
+.navlinks:hover {
+  @apply border-[rgba(255,255,255,0.5)];
+}
+
+.largebtn {
+  @apply uppercase font-Bellefair text-primary w-[15rem] h-[15rem] md:w-[26rem] md:h-[26rem] lg:w-[27rem] lg:h-[27rem] rounded-full block mx-auto lg:mx-0 mt-[10rem] lg:mt-0 bg-white relative;
+}
+
+.largebtn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  transition: all 0.3s;
+}
+
+.largebtn:hover::before {
+  transform: scale(1.4);
+}
+
+.tabBtn {
+  @apply uppercase  text-secondary py-3 block border-b-[3px] border-transparent;
+}
+
+.tabBtn.active {
+  @apply border-white text-white;
+}
+
+.tabBtn:hover {
+  @apply border-[rgba(255,255,255,0.5)] text-secondary;
+}
+
+.slideBtn1 {
+  @apply w-[1.5rem] h-[1.5rem] rounded-full bg-white bg-opacity-[0.17];
+}
+
+.slideBtn1.active {
+  @apply bg-opacity-100;
+}
+
+.slideBtn1:hover {
+  @apply bg-opacity-50;
+}
+
+.slideBtn2 {
+  @apply w-[8rem] h-[8rem] rounded-full bg-transparent text-white grid place-items-center border border-white border-opacity-[0.17];
+}
+
+.slideBtn2.active {
+  @apply bg-white text-primary;
+}
+
+.slideBtn2:hover {
+  @apply border-opacity-50;
+}
+
+@keyframes wipe-enter {
+  0% {
+    transform: scale(0, 0);
+  }
+  15% {
+    transform: scale(1, 0);
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes from-top {
+  from {
+    transform: translateY(-25%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes from-bottom {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.hamburger {
+  padding: 15px 15px;
+  display: inline-block;
+  cursor: pointer;
+  transition-property: opacity, filter;
+  transition-duration: 0.15s;
+  transition-timing-function: linear;
+  font: inherit;
+  color: inherit;
+  text-transform: none;
+  background-color: transparent;
+  border: 0;
+  margin-top: 0;
+  overflow: visible;
+  @apply md:hidden;
+}
+.hamburger:hover {
+  opacity: 0.7;
+}
+.hamburger.is-active:hover {
+  opacity: 0.7;
+}
+.hamburger.is-active .hamburger-inner,
+.hamburger.is-active .hamburger-inner::before,
+.hamburger.is-active .hamburger-inner::after {
+  background-color: rgb(255, 255, 255);
+}
+
+.hamburger-box {
+  width: 30px;
+  height: 24px;
+  display: inline-block;
+  position: relative;
+}
+
+.hamburger-inner {
+  display: block;
+  top: 50%;
+  margin-top: -2px;
+}
+.hamburger-inner,
+.hamburger-inner::before,
+.hamburger-inner::after {
+  width: 30px;
+  height: 4px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 4px;
+  position: absolute;
+  transition-property: transform;
+  transition-duration: 0.15s;
+  transition-timing-function: ease;
+}
+.hamburger-inner::before,
+.hamburger-inner::after {
+  content: "";
+  display: block;
+}
+.hamburger-inner::before {
+  top: -10px;
+}
+.hamburger-inner::after {
+  bottom: -10px;
+}
+
+.hamburger--emphatic {
+  overflow: hidden;
+}
+.hamburger--emphatic .hamburger-inner {
+  transition: background-color 0.125s 0.175s ease-in;
+}
+.hamburger--emphatic .hamburger-inner::before {
+  left: 0;
+  transition: transform 0.125s cubic-bezier(0.6, 0.04, 0.98, 0.335),
+    top 0.05s 0.125s linear, left 0.125s 0.175s ease-in;
+}
+.hamburger--emphatic .hamburger-inner::after {
+  top: 10px;
+  right: 0;
+  transition: transform 0.125s cubic-bezier(0.6, 0.04, 0.98, 0.335),
+    top 0.05s 0.125s linear, right 0.125s 0.175s ease-in;
+}
+.hamburger--emphatic.is-active .hamburger-inner {
+  transition-delay: 0s;
+  transition-timing-function: ease-out;
+  background-color: transparent !important;
+}
+.hamburger--emphatic.is-active .hamburger-inner::before {
+  left: -80px;
+  top: -80px;
+  transform: translate3d(80px, 80px, 0) rotate(45deg);
+  transition: left 0.125s ease-out, top 0.05s 0.125s linear,
+    transform 0.125s 0.175s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.hamburger--emphatic.is-active .hamburger-inner::after {
+  right: -80px;
+  top: -80px;
+  transform: translate3d(-80px, 80px, 0) rotate(-45deg);
+  transition: right 0.125s ease-out, top 0.05s 0.125s linear,
+    transform 0.125s 0.175s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
