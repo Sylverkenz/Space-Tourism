@@ -6,7 +6,7 @@ import Header from "./Header";
 
 function SharedLayout() {
   return (
-    <main className="relative bg-primary h-screen py-12">
+    <main className="relative bg-primary h-fit md:h-screen py-12 ">
       <Header />
       <Outlet />
     </main>
@@ -71,7 +71,6 @@ function Destinations() {
               <p className=" bodytext">{desc}</p>
               <span className="h-[1px] w-full block bg-[#383B4B] my-8"></span>
               <div className="flex flex-col md:flex-row md:justify-center lg:justify-start gap-4 md:gap-[6rem]">
-
                 <p className="subheading1">
                   <span className="block subheading2">avg. distance</span>
                   {distance}
