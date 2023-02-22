@@ -23,11 +23,11 @@ html {
 }
 
 .heading3 {
-  @apply font-Bellefair text-[5rem] tracking-widest uppercase text-white;
+  @apply font-Bellefair text-[2.5rem] md:text-[3.8rem] lg:text-[5rem] tracking-widest uppercase text-white;
 }
 
 .heading4 {
-  @apply font-Bellefair text-[2rem] md:text-[3.2rem] tracking-widest uppercase text-white;
+  @apply font-Bellefair text-[1.6rem] md:text-[2.4rem] lg:text-[3.2rem] tracking-widest uppercase text-white;
 }
 
 .heading5 {
@@ -51,7 +51,7 @@ html {
 }
 
 .content {
-  @apply w-full min-h-screen md:pl-[8vw] md:overflow-hidden;
+  @apply w-full min-h-screen lg:pl-[8vw] md:overflow-hidden;
 }
 
 .content--home {
@@ -148,6 +148,10 @@ html {
 
 .tech__img {
   animation: from-top 0.5s;
+}
+
+.dirbtns {
+  @apply grid place-items-center text-[1.6rem] text-[#fff] rounded-full  w-[5rem] h-[5rem] border border-[#fff] absolute;
 }
 
 .nav {

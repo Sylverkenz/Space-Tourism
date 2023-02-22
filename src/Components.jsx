@@ -9,7 +9,7 @@ const Nav = () => {
   function navHandler() {
     setIsOpen(false);
   }
-  
+
   return (
     <nav className={isOpen ? `nav open` : `nav`}>
       <NavLink to="/" className="navtext navlinks" onClick={navHandler}>
@@ -79,7 +79,7 @@ function Slide1() {
 
   return (
     <div
-      className="flex gap-[2.2rem] absolute bottom-[4rem] z-10"
+      className="lg:flex gap-[2.2rem] absolute hidden sm:bottom-[32rem] md:bottom-[4rem] left-[33%] md:left-0  lg:left-[10rem] lg:z-10"
       ref={buttons}
     >
       {tabs.map((tab) => {

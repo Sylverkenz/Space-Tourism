@@ -5,9 +5,10 @@ const AppContext = React.createContext();
 
 export function AppProvider({ children }) {
   const [places, setPlaces] = useState([destination[0]]);
-  const [guides, setGuides] = useState([crew[0]]);
+  const [guides, setGuides] = useState([crew[1]]);
   const [tech, setTech] = useState([techs[0]]);
   const [isOpen, setIsOpen] = useState(false);
+  const [index, setIndex] = useState(0);
   const buttons = useRef(null);
 
   function active(id) {
@@ -45,6 +46,9 @@ export function AppProvider({ children }) {
         buttons,
         isOpen,
         setIsOpen,
+        index,
+        setIndex,
+        crew,
       }}
     >
       {children}
