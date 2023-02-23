@@ -1,4 +1,6 @@
 import React from "react";
+import { motion } from "framer-motion";
+import { pageAnim } from "../animations";
 import { useGlobaContext } from "../context";
 import { Slide1 } from "../Components";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
@@ -15,7 +17,7 @@ function Crew() {
     crewHandler(index);
   }
   return (
-    <div className="content content--crew pt-[10rem] md:pt-[16rem] overflow-hidden pb-8 lg:pr-[8vw] relative px-[2rem]">
+    <motion.div variants={pageAnim} initial="hidden" animate="show" exit="exit" className="content content--crew pt-[10rem] md:pt-[16rem] overflow-hidden pb-8 lg:pr-[8vw] relative px-[2rem]">
       <h2 className="heading5 text-center md:text-left">
         <span className="opacity-25 mr-8">02</span>
         meet your crew
@@ -51,7 +53,7 @@ function Crew() {
           </article>
         );
       })}
-    </div>
+    </motion.div>
   );
 }
 

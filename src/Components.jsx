@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react";
+import React, { useEffect } from "react";
 import { useGlobaContext } from "./context";
 import { tabs, slide2 } from "./data";
 import { NavLink } from "react-router-dom";
@@ -103,7 +103,7 @@ function Slide2() {
     techHandler(0);
   }, []);
   return (
-    <div className="flex flex-col gap-[2.2rem]" ref={buttons}>
+    <div className="flex lg:flex-col gap-[2.2rem]" ref={buttons}>
       {slide2.map((tech) => {
         const { id } = tech;
         return (

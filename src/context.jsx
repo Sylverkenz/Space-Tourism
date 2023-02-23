@@ -1,5 +1,5 @@
 import React, { useContext, useState, useRef } from "react";
-import { destination, tabs, crew, techs } from "./data";
+import { destination,crew, techs, techs2 } from "./data";
 
 const AppContext = React.createContext();
 
@@ -7,6 +7,7 @@ export function AppProvider({ children }) {
   const [places, setPlaces] = useState([destination[0]]);
   const [guides, setGuides] = useState([crew[1]]);
   const [tech, setTech] = useState([techs[0]]);
+  const [tech2, setTech2] = useState([techs2[0]])
   const [isOpen, setIsOpen] = useState(false);
   const [index, setIndex] = useState(0);
   const buttons = useRef(null);
@@ -28,6 +29,7 @@ export function AppProvider({ children }) {
   }
   function techHandler(id) {
     setTech([techs[id]]);
+    setTech2([techs2[id]]);
     active(id);
   }
 
@@ -39,7 +41,8 @@ export function AppProvider({ children }) {
         guides,
         setGuides,
         tech,
-        setTech,
+        setTech,tech2,
+        setTech2,
         destHandler,
         crewHandler,
         techHandler,

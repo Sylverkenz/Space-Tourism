@@ -12,6 +12,21 @@
 
 html {
   font-size: 62.5%;
+  background-color: #0B0D17;
+}
+
+@media (min-width: 1100px) {
+  *::-webkit-scrollbar {
+    width: 0px;
+  }
+  *::-webkit-scrollbar-track {
+    background: gainsboro;
+    border-radius: 5px;
+  }
+  *::-webkit-scrollbar-thumb {
+    background: black;
+    border-radius: 5px;
+  }
 }
 
 .heading1 {
@@ -23,7 +38,7 @@ html {
 }
 
 .heading3 {
-  @apply font-Bellefair text-[2.5rem] md:text-[3.8rem] lg:text-[5rem] tracking-widest uppercase text-white;
+  @apply font-Bellefair text-[2.5rem] md:text-[3.9rem] lg:text-[5rem] tracking-widest uppercase text-white;
 }
 
 .heading4 {
@@ -47,11 +62,11 @@ html {
 }
 
 .bodytext {
-  @apply font-BarlowN text-[1.5rem]  md:text-[1.8rem] text-secondary leading-10;
+  @apply font-BarlowN text-[1.5rem]  md:text-[1.9rem] text-secondary leading-10;
 }
 
 .content {
-  @apply w-full min-h-screen lg:pl-[8vw] md:overflow-hidden;
+  @apply w-full min-h-screen  lg:pl-[8vw] md:overflow-hidden;
 }
 
 .content--home {
@@ -236,7 +251,7 @@ html {
 }
 
 .slideBtn2 {
-  @apply w-[8rem] h-[8rem] rounded-full bg-transparent text-white grid place-items-center border border-white border-opacity-[0.17];
+  @apply w-[5rem]  h-[5rem] md:w-[6.5rem]  md:h-[6.5rem] lg:w-[8rem] lg:h-[8rem] rounded-full bg-transparent text-white grid place-items-center border border-white border-opacity-[0.17];
 }
 
 .slideBtn2.active {

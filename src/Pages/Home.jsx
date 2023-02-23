@@ -1,8 +1,10 @@
 import React from "react";
+import { motion } from "framer-motion";
+import {pageAnim} from '../animations'
 
 function Home() {
   return (
-    <div className="content content--home lg:flex items-end gap-[30rem] text-center lg:text-start pt-[14rem] pb-[5rem] md:pt-[18rem] lg:py-[10vh] px-[8vw] md:pr-[8vw]">
+    <motion.div variants={pageAnim} initial="hidden" animate="show" exit="exit" className="content content--home lg:flex items-end gap-[30rem] text-center lg:text-start pt-[14rem] pb-[5rem] md:pt-[18rem] lg:py-[10vh] px-[8vw] md:pr-[8vw]">
       <article className="lg:w-[50%] max-w-[45rem] mx-auto lg:mx-0">
         <h1 className="heading5">
           so, you want to travel to<span className="heading1 block">space</span>
@@ -15,7 +17,7 @@ function Home() {
         </p>
       </article>
       <button className="largebtn heading4 text-transparent">explore</button>
-    </div>
+    </motion.div>
   );
 }
 

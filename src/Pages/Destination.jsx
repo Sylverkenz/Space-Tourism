@@ -1,11 +1,13 @@
 import React from "react";
+import { motion } from "framer-motion";
+import { pageAnim } from "../animations";
 import { useGlobaContext } from "../context";
 import { Tabs } from "../Components";
 
 function Destination() {
   const { places, setPlaces } = useGlobaContext();
   return (
-    <div className="content content--destination  pt-[8rem] md:pt-[14rem] lg:pt-[16rem] overflow-hidden px-8 md:pr-[8vw]">
+    <motion.div  variants={pageAnim} initial="hidden" animate="show" exit="exit" className="content content--destination  pt-[8rem] md:pt-[14rem] lg:pt-[16rem] overflow-hidden px-8 md:pr-[8vw]">
       <h2 className="heading5 mb-[rem]">
         <span className="opacity-25 mr-8">01</span>
         pick your destination
@@ -54,7 +56,7 @@ function Destination() {
           );
         })}
       </article>
-    </div>
+    </motion.div>
   );
 }
 
