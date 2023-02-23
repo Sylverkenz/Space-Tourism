@@ -203,7 +203,7 @@ html {
 }
 
 .navlinks:hover {
-  @apply border-[rgba(255,255,255,0.5)];
+  @apply lg:border-[rgba(255,255,255,0.5)];
 }
 
 .largebtn {
@@ -258,7 +258,21 @@ html {
   @apply bg-white text-primary;
 }
 
+
+
 .slideBtn2:hover {
+  @apply border-opacity-50;
+}
+
+.slideBtn3 {
+  @apply w-[5rem]  h-[5rem] md:w-[6.5rem]  md:h-[6.5rem] lg:w-[8rem] lg:h-[8rem] rounded-full bg-transparent text-white grid place-items-center border border-white border-opacity-[0.17];
+}
+
+.slideBtn3.active {
+  @apply bg-white text-primary;
+}
+
+.slideBtn3:hover {
   @apply border-opacity-50;
 }
 

@@ -35,7 +35,7 @@ function Crew() {
               <h4 className="heading3">{name}</h4>
               <p className="bodytext lg:w-[60%]">{desc}</p>
             </div>
-            <div className="crew__img w-full h-[28rem] md:h-[53rem] md:w-[45rem] lg:h-[51rem] lg:-mt-[5rem] border-b mt-[2rem] border-[#979797]">
+            <div className="crew__img w-full h-[28rem] md:h-[53rem] md:w-[45rem] lg:h-[51rem] lg:-mt-[5rem] border-b md:border-none mt-[2rem] border-[#979797]">
               <img
                 src={image}
                 alt=""

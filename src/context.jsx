@@ -11,11 +11,19 @@ export function AppProvider({ children }) {
   const [isOpen, setIsOpen] = useState(false);
   const [index, setIndex] = useState(0);
   const buttons = useRef(null);
+  const buttons2 = useRef(null);
 
   function active(id) {
     const allButtons = buttons.current.childNodes;
     allButtons.forEach((element) => element.classList.remove("active"));
     allButtons[id].classList.add("active");
+    
+  }
+  function active2(id) {
+    
+    const allButtons2 = buttons2.current.childNodes;
+    allButtons2.forEach((element) => element.classList.remove("active"));
+    allButtons2[id].classList.add("active");
   }
 
   function destHandler(id) {
@@ -31,6 +39,7 @@ export function AppProvider({ children }) {
     setTech([techs[id]]);
     setTech2([techs2[id]]);
     active(id);
+    active2(id);
   }
 
   return (
@@ -47,6 +56,7 @@ export function AppProvider({ children }) {
         crewHandler,
         techHandler,
         buttons,
+        buttons2,
         isOpen,
         setIsOpen,
         index,

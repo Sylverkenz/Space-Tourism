@@ -97,7 +97,7 @@ function Slide1() {
 }
 
 function Slide2() {
-  const { techHandler, buttons } = useGlobaContext();
+  const { techHandler, buttons,  } = useGlobaContext();
   useEffect(() => {
     buttons.current.childNodes[0].classList.add("active");
     techHandler(0);
@@ -120,4 +120,28 @@ function Slide2() {
   );
 }
 
-export { Nav, Tabs, Slide1, Slide2 };
+function Slide3() {
+  const { techHandler, buttons, buttons2 } = useGlobaContext();
+  useEffect(() => {
+    buttons2.current.childNodes[0].classList.add("active");
+    techHandler(0);
+  }, []);
+  return (
+    <div className="flex lg:flex-col gap-[2.2rem]" ref={buttons2}>
+      {slide2.map((tech) => {
+        const { id } = tech;
+        return (
+          <button
+            key={id}
+            className="slideBtn3 heading4"
+            onClick={() => techHandler(id)}
+          >
+            {id + 1}
+          </button>
+        );
+      })}
+    </div>
+  );
+}
+
+export { Nav, Tabs, Slide1, Slide2, Slide3 };

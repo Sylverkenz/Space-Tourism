@@ -1,7 +1,7 @@
 import React from 'react'
 import { motion } from 'framer-motion';
 import { pageAnim } from '../animations';
-import { Slide2 } from '../Components';
+import { Slide2, Slide3 } from '../Components';
 import { useGlobaContext } from '../context';
 
 function Technology() {
@@ -33,9 +33,9 @@ function Technology() {
             );
           })}
         </div>
-
+        
         <div className="tech__content lg:hidden flex flex-col items-center gap-[3rem] h-[42rem] ">
-          <Slide2 />
+        <Slide3 />
           {tech2.map((tech) => {
             const { id, image, desc, name } = tech;
             return (
@@ -53,6 +53,7 @@ function Technology() {
               </article>
             );
           })}
+        
         </div>
       </motion.div>
     );
