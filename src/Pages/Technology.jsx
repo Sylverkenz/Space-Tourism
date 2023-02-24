@@ -40,7 +40,7 @@ function Technology() {
             const { id, image, desc, name } = tech;
             return (
               <article key={id} className="flex  flex-col-reverse items-center text-center gap-12 ">
-                <div className="tech__info md:w-[60%]">
+                <div className="tech__info w-[85%] md:w-[60%]">
                   <h3 className="font-Barlow text-secondary text-[1.6rem] uppercase tracking-wide">
                     The technology...
                   </h3>
