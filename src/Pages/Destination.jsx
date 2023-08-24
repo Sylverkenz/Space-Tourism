@@ -21,7 +21,7 @@ function Destination() {
               <img
                 src={img}
                 alt=""
-                className="w-[17rem] md:w-[30rem] lg:w-[41rem] xlg:w-[39rem] h-[100%] mx-auto"
+                className="w-[17rem] md:w-[30rem] lg:w-[41rem] xlg:w-[39rem] min-h-[16rem] lg:h-[100%] mx-auto"
               />
             </figure>
           );

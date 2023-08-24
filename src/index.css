@@ -70,42 +70,42 @@ html {
 }
 
 .content--home {
-  background: url(./assets/home/background-home-desktop.jpg);
+  background: url(./home/background-home-desktop.jpg);
 }
 
 .content--destination {
-  background: url(./assets/destination/background-destination-desktop.jpg);
+  background: url(./destination/background-destination-desktop.jpg);
 }
 
 .content--crew {
-  background: url(./assets/crew/background-crew-desktop.jpg);
+  background: url(./crew/background-crew-desktop.jpg);
 }
 
 .content--technology {
-  background: url(./assets/technology/background-technology-desktop.jpg);
+  background: url(./technology/background-technology-desktop.jpg);
 }
 
 @media (max-width: 768px) {
   .content--home {
-    background: url(./assets/home/background-home-mobile.jpg);
+    background: url(./home/background-home-mobile.jpg);
     background-repeat: no-repeat;
     background-size: cover;
   }
 
   .content--destination {
-    background: url(./assets/destination/background-destination-mobile.jpg);
+    background: url(./destination/background-destination-mobile.jpg);
     background-repeat: no-repeat;
     background-size: cover;
   }
 
   .content--crew {
-    background: url(./assets/crew/background-crew-mobile.jpg);
+    background: url(./crew/background-crew-mobile.jpg);
     background-repeat: no-repeat;
     background-size: cover;
   }
 
   .content--technology {
-    background: url(./assets/technology/background-technology-mobile.jpg);
+    background: url(./technology/background-technology-mobile.jpg);
     background-repeat: no-repeat;
     background-size: cover;
   }
@@ -113,25 +113,25 @@ html {
 
 @media (max-width: 1024px) {
   .content--home {
-    background: url(./assets/home/background-home-tablet.jpg);
+    background: url(./home/background-home-tablet.jpg);
     background-repeat: no-repeat;
     background-size: cover;
   }
 
   .content--destination {
-    background: url(./assets/destination/background-destination-tablet.jpg);
+    background: url(./destination/background-destination-tablet.jpg);
     background-repeat: no-repeat;
     background-size: cover;
   }
 
   .content--crew {
-    background: url(./assets/crew/background-crew-tablet.jpg);
+    background: url(./crew/background-crew-tablet.jpg);
     background-repeat: no-repeat;
     background-size: cover;
   }
 
   .content--technology {
-    background: url(./assets/technology/background-technology-tablet.jpg);
+    background: url(./technology/background-technology-tablet.jpg);
     background-repeat: no-repeat;
     background-size: cover;
   }
