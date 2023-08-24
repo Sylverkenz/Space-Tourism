@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { pageAnim } from "../animations";
 import { useGlobaContext } from "../context";
-import { Tabs } from "../Components";
+import { Tabs, DestinationPictures } from "../Components";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 
 function Destination() {
@@ -22,17 +22,10 @@ function Destination() {
       </h2>
 
       <article className="destination__content py-4 flex flex-col gap-6 md:gap-[3rem] lg:flex-row justify-between">
-        <figure className="destination__imgbox lg:w-[60%]">
-          <LazyLoadImage
-            src={img}
-            alt={title}
-            className="w-[17rem] md:w-[30rem] lg:w-[41rem] xlg:w-[39rem] min-h-[16rem] lg:h-[100%] mx-auto"
-          />
-        </figure>
+        <DestinationPictures  states={{ img, title }} />
         <article className="lg:absolute top-[30%] right-[21rem] xlg:right-[25rem] mx-auto lg:mx-0">
           <Tabs />
         </article>
-        return (
         <div
           key={currentDestTab}
           className="destination__info md:w-[90%] mx-auto lg:mx-0 w-full lg:w-[37%]  text-center lg:text-start lg:mt-16"

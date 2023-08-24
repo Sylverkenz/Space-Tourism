@@ -44,16 +44,10 @@ const Nav = () => {
 };
 
 const Tabs = () => {
-  const { destHandler, buttons, currentDestTab,  } =
-    useGlobaContext();
-
-  useEffect(() => {
-    buttons.current.childNodes[0].classList.add("active");
-    destHandler(0);
-  }, []);
+  const { destHandler, currentDestTab } = useGlobaContext();
 
   return (
-    <div className="flex gap-[3.5rem] w-[37]" ref={buttons}>
+    <div className="flex gap-[3.5rem] w-[37]">
       {tabs.map((tab) => {
         const { id, name } = tab;
         return (
@@ -64,7 +58,6 @@ const Tabs = () => {
                 ? "tabBtn navtext active"
                 : "tabBtn navtext "
             }
-            data-id={`${id}`}
             onClick={() => destHandler(id)}
           >
             {name}
@@ -72,6 +65,20 @@ const Tabs = () => {
         );
       })}
     </div>
+  );
+};
+
+const DestinationPictures = ({ states }) => {
+  const { img, title } = states;
+  return (
+    <figure className=" lg:w-[60%]">
+      <img
+        key={title}
+        src={img}
+        alt={title}
+        className="destination__imgbox w-[17rem] md:w-[30rem] lg:w-[41rem] xlg:w-[39rem] min-h-[16rem] lg:h-[100%] mx-auto"
+      />
+    </figure>
   );
 };
 
@@ -149,4 +156,4 @@ function Slide3() {
   );
 }
 
-export { Nav, Tabs, Slide1, Slide2, Slide3 };
+export { Nav, Tabs, Slide1, Slide2, Slide3, DestinationPictures };
