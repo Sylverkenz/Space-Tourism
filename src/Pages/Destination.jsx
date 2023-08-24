@@ -7,7 +7,13 @@ import { Tabs } from "../Components";
 function Destination() {
   const { places, setPlaces } = useGlobaContext();
   return (
-    <motion.div  variants={pageAnim} initial="hidden" animate="show" exit="exit" className="content content--destination  pt-[8rem] md:pt-[14rem] lg:pt-[16rem] overflow-hidden px-8 md:pr-[8vw]">
+    <motion.div
+      variants={pageAnim}
+      initial="hidden"
+      animate="show"
+      exit="exit"
+      className="content content--destination  pt-[8rem] md:pt-[14rem] lg:pt-[16rem] overflow-hidden px-8 md:pr-[8vw]"
+    >
       <h2 className="heading5 mb-[rem]">
         <span className="opacity-25 mr-8">01</span>
         pick your destination
@@ -15,12 +21,12 @@ function Destination() {
 
       <article className="destination__content py-4 flex flex-col gap-6 md:gap-[3rem] lg:flex-row justify-between">
         {places.map((place) => {
-          const { id, img } = place;
+          const { id, img, title } = place;
           return (
             <figure key={id} className="destination__imgbox lg:w-[60%]">
               <img
                 src={img}
-                alt=""
+                alt={title}
                 className="w-[17rem] md:w-[30rem] lg:w-[41rem] xlg:w-[39rem] min-h-[16rem] lg:h-[100%] mx-auto"
               />
             </figure>
