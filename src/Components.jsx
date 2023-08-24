@@ -44,7 +44,8 @@ const Nav = () => {
 };
 
 const Tabs = () => {
-  const { destHandler, buttons } = useGlobaContext();
+  const { destHandler, buttons, currentDestTab,  } =
+    useGlobaContext();
 
   useEffect(() => {
     buttons.current.childNodes[0].classList.add("active");
@@ -58,7 +59,11 @@ const Tabs = () => {
         return (
           <button
             key={id}
-            className="tabBtn navtext "
+            className={
+              id === currentDestTab
+                ? "tabBtn navtext active"
+                : "tabBtn navtext "
+            }
             data-id={`${id}`}
             onClick={() => destHandler(id)}
           >
@@ -97,7 +102,7 @@ function Slide1() {
 }
 
 function Slide2() {
-  const { techHandler, buttons,  } = useGlobaContext();
+  const { techHandler, buttons } = useGlobaContext();
   useEffect(() => {
     buttons.current.childNodes[0].classList.add("active");
     techHandler(0);
