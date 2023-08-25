@@ -70,50 +70,50 @@ html {
 }
 
 .content--home {
-  background: url(./home/background-home-desktop.jpg);
+  background: url(./public/home/background-home-desktop.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .content--destination {
-  background: url(./destination/background-destination-desktop.jpg);
+  background: url(./public/destination/background-destination-desktop.jpg);
   background-repeat: no-repeat;
-    background-size: cover;
+  background-size: cover;
 }
 
 .content--crew {
-  background: url(./crew/background-crew-desktop.jpg);
+  background: url(./public/crew/background-crew-desktop.jpg);
   background-repeat: no-repeat;
-    background-size: cover;
+  background-size: cover;
 }
 
 .content--technology {
-  background: url(./technology/background-technology-desktop.jpg);
+  background: url(./public/technology/background-technology-desktop.jpg);
   background-repeat: no-repeat;
-    background-size: cover;
+  background-size: cover;
 }
 
 @media (max-width: 768px) {
   .content--home {
-    background: url(./home/background-home-mobile.jpg);
+    background: url(./public/home/background-home-mobile.jpg);
     background-repeat: no-repeat;
     background-size: cover;
   }
 
   .content--destination {
-    background: url(./destination/background-destination-mobile.jpg);
+    background: url(./public/destination/background-destination-mobile.jpg);
     background-repeat: no-repeat;
     background-size: cover;
   }
 
   .content--crew {
-    background: url(./crew/background-crew-mobile.jpg);
+    background: url(./public/crew/background-crew-mobile.jpg);
     background-repeat: no-repeat;
     background-size: cover;
   }
 
   .content--technology {
-    background: url(./technology/background-technology-mobile.jpg);
+    background: url(./public/technology/background-technology-mobile.jpg);
     background-repeat: no-repeat;
     background-size: cover;
   }
@@ -121,25 +121,25 @@ html {
 
 @media (max-width: 1024px) {
   .content--home {
-    background: url(./home/background-home-tablet.jpg);
+    background: url(./public/home/background-home-tablet.jpg);
     background-repeat: no-repeat;
     background-size: cover;
   }
 
   .content--destination {
-    background: url(./destination/background-destination-tablet.jpg);
+    background: url(./public/destination/background-destination-tablet.jpg);
     background-repeat: no-repeat;
     background-size: cover;
   }
 
   .content--crew {
-    background: url(./crew/background-crew-tablet.jpg);
+    background: url(./public/crew/background-crew-tablet.jpg);
     background-repeat: no-repeat;
     background-size: cover;
   }
 
   .content--technology {
-    background: url(./technology/background-technology-tablet.jpg);
+    background: url(./public/technology/background-technology-tablet.jpg);
     background-repeat: no-repeat;
     background-size: cover;
   }
