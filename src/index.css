@@ -10,11 +10,9 @@
   box-sizing: border-box;
 }
 
-
-
 html {
   font-size: 62.5%;
-  background-color: #0B0D17;
+  background-color: #0b0d17;
 }
 
 @media (min-width: 1100px) {
@@ -73,18 +71,26 @@ html {
 
 .content--home {
   background: url(./home/background-home-desktop.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .content--destination {
   background: url(./destination/background-destination-desktop.jpg);
+  background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .content--crew {
   background: url(./crew/background-crew-desktop.jpg);
+  background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .content--technology {
   background: url(./technology/background-technology-desktop.jpg);
+  background-repeat: no-repeat;
+    background-size: cover;
 }
 
 @media (max-width: 768px) {
@@ -241,7 +247,7 @@ html {
 }
 
 .slideBtn1 {
-  @apply w-[1.5rem] h-[1.5rem] rounded-full bg-white bg-opacity-[0.17];
+  @apply w-[1.7rem] h-[1.7rem] rounded-full bg-white bg-opacity-[0.17] cursor-pointer;
 }
 
 .slideBtn1.active {
@@ -259,8 +265,6 @@ html {
 .slideBtn2.active {
   @apply bg-white text-primary;
 }
-
-
 
 .slideBtn2:hover {
   @apply border-opacity-50;

@@ -76,30 +76,23 @@ const DestinationPictures = ({ states }) => {
         key={title}
         src={img}
         alt={title}
-        className="destination__imgbox w-[17rem] md:w-[30rem] lg:w-[41rem] xlg:w-[39rem] min-h-[16rem] lg:h-[100%] mx-auto"
+        className="destination__imgbox w-[17rem] md:w-[30rem] lg:w-[41rem] xlg:w-[39rem] xl:w-[42rem]  min-h-[16rem] lg:h-[100%] mx-auto"
       />
     </figure>
   );
 };
 
 function Slide1() {
-  const { crewHandler, buttons } = useGlobaContext();
-  useEffect(() => {
-    buttons.current.childNodes[0].classList.add("active");
-    crewHandler(0);
-  }, []);
+  const { crewHandler, currentCrewTab } = useGlobaContext();
 
   return (
-    <div
-      className="lg:flex gap-[2.2rem] absolute hidden sm:bottom-[32rem] md:bottom-[4rem] left-[33%] md:left-0  lg:left-[10rem] lg:z-10"
-      ref={buttons}
-    >
+    <div className="lg:flex gap-[2.2rem] absolute hidden sm:bottom-[32rem] md:bottom-[7rem] xl:bottom-[16rem] left-[33%] md:left-0  lg:left-[11rem] xl:left-[14rem] lg:z-10">
       {tabs.map((tab) => {
         const { id } = tab;
         return (
           <button
             key={id}
-            className="slideBtn1"
+            className={`${id === currentCrewTab ? "active" : null} slideBtn1`}
             onClick={() => crewHandler(id)}
           ></button>
         );
@@ -109,19 +102,18 @@ function Slide1() {
 }
 
 function Slide2() {
-  const { techHandler, buttons } = useGlobaContext();
-  useEffect(() => {
-    buttons.current.childNodes[0].classList.add("active");
-    techHandler(0);
-  }, []);
+  const { techHandler, currentTechTab } = useGlobaContext();
+
   return (
-    <div className="flex lg:flex-col gap-[2.2rem]" ref={buttons}>
+    <div className="flex lg:flex-col gap-[2.2rem]">
       {slide2.map((tech) => {
         const { id } = tech;
         return (
           <button
             key={id}
-            className="slideBtn2 heading4"
+            className={`${
+              id === currentTechTab ? "active" : null
+            } slideBtn2 heading4`}
             onClick={() => techHandler(id)}
           >
             {id + 1}
@@ -133,19 +125,18 @@ function Slide2() {
 }
 
 function Slide3() {
-  const { techHandler, buttons, buttons2 } = useGlobaContext();
-  useEffect(() => {
-    buttons2.current.childNodes[0].classList.add("active");
-    techHandler(0);
-  }, []);
+  const { techHandler, currentTechTab } = useGlobaContext();
+
   return (
-    <div className="flex lg:flex-col gap-[2.2rem]" ref={buttons2}>
+    <div className="flex lg:flex-col gap-[2.2rem]">
       {slide2.map((tech) => {
         const { id } = tech;
         return (
           <button
             key={id}
-            className="slideBtn3 heading4"
+            className={`${
+              id === currentTechTab ? "active" : null
+            } slideBtn3 heading4`}
             onClick={() => techHandler(id)}
           >
             {id + 1}

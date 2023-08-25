@@ -21,9 +21,9 @@ function Destination() {
         pick your destination
       </h2>
 
-      <article className="destination__content py-4 flex flex-col gap-6 md:gap-[3rem] lg:flex-row justify-between">
-        <DestinationPictures  states={{ img, title }} />
-        <article className="lg:absolute top-[30%] right-[21rem] xlg:right-[25rem] mx-auto lg:mx-0">
+      <article className="destination__content py-4 xl:py-[12rem] flex flex-col gap-6 md:gap-[3rem] lg:flex-row justify-between">
+        <DestinationPictures states={{ img, title }} />
+        <article className="lg:absolute top-[30%] xl:top-[35%] right-[21rem] xlg:right-[25rem] mx-auto lg:mx-8 xl:mx-[13rem]">
           <Tabs />
         </article>
         <div
@@ -45,7 +45,6 @@ function Destination() {
             </p>
           </div>
         </div>
-        )
       </article>
     </motion.div>
   );
